@@ -20,3 +20,5 @@ StudyClock é uma aplicação de cronômetro projetada para auxiliar na organiza
    ```bash
    git clone https://github.com/gabrieloliv10/StudyClock.git
 
+## Screenshot 📸
+![Tela inicial do StudyClock](./public/images/studyclock-print.png)
