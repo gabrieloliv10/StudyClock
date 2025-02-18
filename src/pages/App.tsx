@@ -5,9 +5,9 @@ import Cronometro from '../components/Cronometro/Index';
 import React, {useState} from 'react';
 import { Itarefa } from '../Types/tarefas';
 
-function App() {
-  const [tarefas, setTarefas] = useState <Itarefa[] | []>([]);
-  const [selecionado, setSelecionado] = useState<Itarefa>();
+  function App() {
+    const [tarefas, setTarefas] = useState <Itarefa[] | []>([]);
+    const [selecionado, setSelecionado] = useState<Itarefa>();
 
   function selecionaTarefa(tarefaSelecionada: Itarefa){
     setSelecionado(tarefaSelecionada);
@@ -18,7 +18,6 @@ function App() {
       })
     ));
   }
-
   function finalizarTarefa(){
     if (selecionado){
       setSelecionado(undefined);
@@ -39,10 +38,10 @@ function App() {
   return (
     <div className={style.AppStyle}>
       <Formulario setTarefas={setTarefas}/>
-      <Lista
-       tarefas={tarefas}
-       selecionaTarefa={selecionaTarefa}
-       />
+        <Lista
+          tarefas={tarefas}
+          selecionaTarefa={selecionaTarefa}
+          />
       <Cronometro
         selecionado={selecionado}
         finalizarTarefa={finalizarTarefa}
